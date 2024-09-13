@@ -1,39 +1,62 @@
-
-body{
-    background-color: lavender;
-    font-family:Verdana, Tahoma, sans-serif;
-    width:auto;
-    height:auto;
-    margin: 0px 20px
-
+#icon{
+    border-radius: 50%;
 }
 
-#logo{
+#galois-blog{
+    text-align:center;
+    top: 50%;
+    left: 50%;
     margin: 0px;
     padding: 8px ;
-    font-family: "Fredoka One", sans-serif;
+    font-family: "Oswald", sans-serif;
     text-shadow:
-    1px 1px 0px black,
-    -1px 1px 0px black,
-    1px -1px 0px black,
-    -1px -1px 0px black;
-    
+    1px 1px 0px rgb(234, 229, 188),
+    -1px 1px 0px rgb(86, 86, 82),
+    1px -1px 0px rgb(86, 86, 82),
+    -1px -1px 0px rgb(86, 86, 82);
+    color: rgb(234, 229, 188) ;  
+    grid-area: text;
 }
 
-ul{
-    margin:0px
+#title-image{
+    border-radius: 35%;
+    height: 100px;
+    width: 200px;
+    float:left;
+    background: #555;
+    border: 1px, solid,  rgb(105, 105, 90);
+    grid-area: image;
+}
+
+
+body{
+    background-color: rgb(200, 226, 249);
+    min-height: 100%;
 }
 
 body > header{
-    color: whitesmoke ;
-    background-color: orange;
+    color: #000000 ;
+    background-color: rgb(57, 162, 208);
     display: flex;
     height: 13vh;
     align-items: center;
-    justify-content: space-around ;
+    justify-content: space-between;
+    margin-top:0px;
+    margin-left:0px;
+    margin-right: 0px;
+    margin-bottom:auto10px
 }
+
+#main-title{
+    display: flex;
+    padding-left: 0.5vw;
+
+}
+
 #nav-ul{
     display: flex;
+    margin: 0px;
+    padding: 8px ;
 }
 
 #nav-ul>li{
@@ -41,67 +64,145 @@ body > header{
     margin: 16px
 }
 
+body>header>nav{
+    display:flex;
+    justify-content:space-between;
+}
 
 body > header > nav > ul {
     list-style: none;
     text-decoration: none;
 }
 
-.navbutton{color: whitesmoke; text-decoration: none;
+.navbutton{color:  rgb(234, 229, 188); text-decoration: none;
     padding: 12px;
-    border: 1px, solid, whitesmoke;
-    border-radius: 15%;
+    border: 1px, solid,  rgb(234, 229, 188);
+    border-radius: 35%;
+    background-color: rgb(105, 105, 90);
+}
+
+#about{
+    grid-area:about;
+    padding: 24px;
+    margin:6px;
+    border: 1px, solid,  rgb(57, 162, 208);
+    border-radius:15%;
+    background-color: rgb(172, 188, 195);
+}
+
+#galois-bio{
+    grid-area: galois-bio;
+    padding:24px;
+    margin:6px;
+    border: 1px, solid,  rgb(57, 162, 208);
+    border-radius:15%;
+    background-color: rgb(208, 204, 179);
+    ;
+}
+
+#letter-img{
+    border-radius: 10%;
+    height: 17vh;
+    width: 250px;
+    border: 1px, solid,  rgb(105, 105, 90);
+    margin: 0px;
+    font-size: small;
+    position: center;
+    
+}
+
+#image-text{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: center;
+}
+
+#image-text>p{
+    margin:8px;
+    font-size:small;
+}
+
+#caption{
+    margin:0px;
+}
+
+
+#about-me{
+    grid-area: about-me;
+    padding:24px;
+    margin:6px;
+    border: 1px, solid,  rgb(57, 162, 208);
+    border-radius:15%;
+    background-color: rgb(140, 208, 238);
+}
+
+#cat-pic{
+    border-radius: 60%;
+    width: 70px;
+    height: auto;
+    margin: 3px;
+    border: 1px, solid,  rgb(105, 105, 90);
+}
+
+#about-cat{
+    display:flex;
+    justify-content: flex-start;
 }
 
 #main-content{
-    display: flex;
-    justify-content:space-around;
+    margin-left: 3%;
+    margin-right: 3%;
+    display: grid; /* NEW */ 
+    grid-template-areas:
+    "about galois-bio"
+    "about-me galois-bio";
+    min-height: 100%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
 
-#main-content>aside{
-    width:20%;
-}
-
-#main-content>div{
-    width:70%;
-}
-
-p{
-    font-size: 1.5vw
-}
-
-body > main article {
-    width: 70%;
-    margin: auto; 
-}
-
-form{
+#main-content>div>div>h2{
     text-align: center;
+    
 }
-h2{
-    text-align: center;
-}
+
+
 
 body > footer {
-    background-color: orange;
-    display:flex;
+    background-color: rgb(57, 162, 208);
+    display: flex;
+    height: 13vh;
+    align-items: normal;
+    justify-content: space-around;
+    
+}
+
+#footertitle{
+    padding: 8px;
+    font-family: "Oswald", sans-serif;
+    text-shadow:
+    1px 1px 0px rgb(234, 229, 188),
+    -1px 1px 0px rgb(86, 86, 82),
+    1px -1px 0px rgb(86, 86, 82),
+    -1px -1px 0px rgb(86, 86, 82);
+    color: rgb(234, 229, 188) ; 
 }
 
 #footer-nav{
     display: flex;
     list-style: none;
+    justify-content: center;
 }
 
 #footer-nav>div>li{
     margin-left: 12px;
+    padding:4px;
 }
 
 #footer-nav>div>li>a{
     text-decoration: none;
-    color: whitesmoke;
-    
+    color: whitesmoke; 
+    margin-bottom: 8px;
 }
-img{
-    border-radius: 50%;
-}
+
